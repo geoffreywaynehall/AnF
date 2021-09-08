@@ -9,4 +9,12 @@ fetch('https://5dc588200bbd050014fb8ae1.mockapi.io/assessment')
         var templateScript = Handlebars.compile(template);
         var html = templateScript(data);
         $('#user-list').html(html);
+
+        $('#toggle-details').click(function () {
+            data.showDetails = !data.showDetails;
+            html = templateScript(data);
+            $('#user-list').html(html);
+
+            $('#toggle-details').text((data.showDetails ? "Hide" : "Show") + " Details")
+        });
     });
