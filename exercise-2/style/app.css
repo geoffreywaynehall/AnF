@@ -96,6 +96,9 @@ html body .container input[type=text] {
 html body .container input[type=text]:focus {
   color: #333333;
 }
+html body .container input[type=text].empty {
+  border-color: #f00;
+}
 html body .container #completed-tasks label {
   text-decoration: line-through;
   color: #888888;

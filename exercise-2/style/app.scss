@@ -124,6 +124,10 @@ html {
                 &:focus {
                     color: $dark-gray;
                 }
+
+                &.empty {
+                    border-color: #f00;
+                }
             }
 
             #completed-tasks label {
