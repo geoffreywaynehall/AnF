@@ -1,7 +1,6 @@
-/* Basic Style */
 html body {
-  background: #ffffff;
-  color: #333;
+  background: #FFFFFF;
+  color: #333333;
   font-family: Lato, sans-serif;
 }
 html body .container {
@@ -16,25 +15,24 @@ html body .container button {
   font-size: 15px;
   width: 60px;
   margin: 10px 0 0;
-  font-family: Lato, sans-serif;
   cursor: pointer;
 }
 html body .container button:hover {
-  color: #333;
+  color: #333333;
 }
 html body .container ul {
-  margin: 0px;
+  margin: 0;
   padding: 0;
 }
 html body .container ul li {
   overflow: hidden;
   padding: 20px 0px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333333;
 }
 html body .container ul li * {
   float: left;
 }
-html body .container ul li .delete :hover {
+html body .container ul li .delete:hover {
   color: #CF2323;
 }
 html body .container ul li label {
@@ -58,6 +56,9 @@ html body .container ul li.editMode input[type=text] {
 html body .container ul li.editMode label {
   display: none;
 }
+html body .container p button:hover {
+  color: #0FC57C;
+}
 html body .container #new-task-label {
   display: block;
   margin: 0 0 20px;
@@ -77,9 +78,9 @@ html body .container h3, html body .container label[for=new-task] {
   color: #333333;
   font-weight: 700;
   font-size: 15px;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #333333;
   padding: 30px 0 10px;
-  margin: 0px;
+  margin: 0;
   text-transform: uppercase;
 }
 html body .container input[type=text] {
@@ -88,21 +89,16 @@ html body .container input[type=text] {
   line-height: 18px;
   height: 18px;
   padding: 10px;
-  border: 1px solid #ddd;
-  background: #fff;
+  border: 1px solid #DDDDDD;
   border-radius: 6px;
-  font-family: Lato, sans-serif;
-  color: #888;
+  color: #888888;
 }
 html body .container input[type=text]:focus {
-  color: #333;
-}
-html body .container p > button :hover {
-  color: #0FC57C;
+  color: #333333;
 }
 html body .container #completed-tasks label {
   text-decoration: line-through;
-  color: #888;
+  color: #888888;
 }
 
 /*# sourceMappingURL=app.css.map */

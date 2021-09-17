@@ -1,9 +1,9 @@
+@import "helpers/variables";
 
-/* Basic Style */
 html {
     body {
-        background: #ffffff;
-        color: #333;
+        background: $white;
+        color: $dark-gray;
         font-family: Lato, sans-serif;
 
         .container {
@@ -14,33 +14,34 @@ html {
             button {
                 background: none;
                 border: 0px;
-                color: #888888;
+                color: $medium-gray;
                 font-size: 15px;
                 width: 60px;
                 margin: 10px 0 0;
-                font-family: Lato, sans-serif;
                 cursor: pointer;
 
                 &:hover {
-                    color: #333;
+                    color: $dark-gray;
                 }
             }
 
             ul {
-                margin: 0px;
+                margin: 0;
                 padding: 0;
 
                 li {
                     overflow: hidden;
                     padding: 20px 0px;
-                    border-bottom: 1px solid #eee;
+                    border-bottom: 1px solid $dark-gray;
 
                     * {
                         float: left;
                     }
 
-                    .delete :hover {
-                        color: #CF2323;
+                    .delete {
+                        &:hover {
+                            color: $red;
+                        }
                     }
 
                     label {
@@ -73,6 +74,14 @@ html {
                 }
             }
 
+            p {
+                button {
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+
             #new-task-label {
                 display: block;
                 margin: 0 0 20px;
@@ -93,12 +102,12 @@ html {
             }
 
             h3, label[for='new-task'] {
-                color: #333333;
+                color: $dark-gray;
                 font-weight: 700;
                 font-size: 15px;
-                border-bottom: 2px solid #333;
+                border-bottom: 2px solid $dark-gray;
                 padding: 30px 0 10px;
-                margin: 0px;
+                margin: 0;
                 text-transform: uppercase;
             }
 
@@ -108,24 +117,18 @@ html {
                 line-height: 18px;
                 height: 18px;
                 padding: 10px;
-                border: 1px solid #ddd;
-                background: #fff;
+                border: 1px solid $light-gray;
                 border-radius: 6px;
-                font-family: Lato, sans-serif;
-                color: #888;
+                color: $medium-gray;
 
                 &:focus {
-                    color: #333;
+                    color: $dark-gray;
                 }
-            }
-
-            p > button :hover {
-                color: #0FC57C;
             }
 
             #completed-tasks label {
                 text-decoration: line-through;
-                color: #888;
+                color: $medium-gray;
             }
         }
     }
