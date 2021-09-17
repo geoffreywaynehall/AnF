@@ -42,21 +42,28 @@ var addTask = function () {
 };
 
 var editTask = function () {
-  var listItem = this.parentNode;
-  var editInput = listItem.querySelectorAll("input[type=text")[0];
-  var label = listItem.querySelector("label");
-  var button = listItem.getElementsByTagName("button")[0];
+    var listItem = this.parentNode;
+    var editInput = listItem.querySelectorAll("input[type=text")[0];
+    var listItemName = editInput.value;
+    console.log(listItemName);
+    var label = listItem.querySelector("label");
+    var button = listItem.getElementsByTagName("button")[0];
 
-  var containsClass = listItem.classList.contains("editMode");
-  if (containsClass) {
-      label.innerText = editInput.value
-      button.innerText = "Edit";
-  } else {
-     editInput.value = label.innerText
-     button.innerText = "Save";
-  }
-  
-  listItem.classList.toggle("editMode");
+    if (listItemName !== '') {
+        var containsClass = listItem.classList.contains("editMode");
+        if (containsClass) {
+            label.innerText = editInput.value
+            button.innerText = "Edit";
+        } else {
+            editInput.value = label.innerText
+            button.innerText = "Save";
+        }
+
+        editInput.className = "";
+        listItem.classList.toggle("editMode");
+    } else {
+        editInput.className = "empty";
+    }
 };
 
 var deleteTask = function (el) {
